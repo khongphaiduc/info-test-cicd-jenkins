@@ -10,5 +10,20 @@ pipeline {
     }
 }
 
+
+
+stage('Build and Push Image') {
+    steps {
+        withDockerRegistry(credentialsId: 'ptrungduc1011', url: 'https://index.docker.io/v1/') {
+            
+            sh 'docker build -t ptrungduc1011/info:v1 .' 
+            sh 'docker push ptrungduc1011/info:v1'
+        }
+    }
+}
+
+
+        
+
     }
 }
