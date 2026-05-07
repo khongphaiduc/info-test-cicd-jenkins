@@ -1,0 +1,248 @@
+﻿@{
+    Layout = null;
+
+    // --- 1. CONFIG DATA ---
+    var fullName = "Phạm Trung Đức";
+    var avatarUrl = "/image/anh2-removebg-preview.png";
+    var roles = "['.NET Engineer', 'Backend Developer', 'Database Specialist', 'System Architect']";
+
+    // --- SOCIAL LINKS ---
+    var facebookUrl = "https://www.facebook.com/pham.trung.uc.673872";
+    var instagramUrl = "https://www.instagram.com/tp_trugduc/";
+    var githubUrl = "https://github.com/khongphaiduc";
+    var linkedinUrl = "https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-ph%E1%BA%A1m-522355341/";
+    var email = "ptrungduc1011@gmail.com";
+    var cvUrl = "/documents/CV.pdf";
+    // --- DỮ LIỆU KỸ NĂNG ---
+    var skills = new List<dynamic>
+    {
+        new { Category = "Languages & Frameworks", Icon = "fa-layer-group", Items = new [] { "C# / .NET Core", "ASP.NET Web API", "RESTful API Design", "Java (Servlet)", "JavaScript", "OOP Principles", "Microservices", "HTML/CSS" } },
+        new { Category = "Database & ORM", Icon = "fa-database", Items = new [] { "SQL Server", "PostgreSQL", "Entity Framework Core", "Code/DB First", "LINQ", "Redis Caching" ,"Elasticsearch"} },
+        new { Category = "Tools & Protocols", Icon = "fa-server", Items = new [] { "Docker / Container", "Git / GitHub", "SignalR / WebSockets", "RabbitMQ", "Postman", "Visual Studio" } }
+    };
+
+    // --- DỮ LIỆU DỰ ÁN ---
+    var projects = new List<dynamic>
+    {
+        new {
+            Title = "Hotel Management System",
+            Role = "Full-stack Developer",
+            Time = "08/2025 - 12/2025",
+            Status = "Hoàn thành",
+            Desc = "Hệ thống quản lý khách sạn toàn diện: Booking engine, Check-in/out, quản lý phòng và hóa đơn.",
+            Tech = new [] { "ASP.NET Core", "SQL Server with Entity Framework Core", "SignalR", "Redis", "Razor Pages","HTML","CSS","Bootstrap","JavaScript","C#","Web API (RESTful API)","JWT","OAuth2"},
+            Image = "/image/hotel.png",
+            GithubUrl = "https://github.com/khongphaiduc/hotel-manager-booking",
+            DemoUrl = "#"
+        },
+        new {
+            Title = "Recruitment website",
+            Role = "Backend Developer",
+           Time = "05/2025 - 07/2025",
+            Status = "Hoàn thành",
+            Desc = "Project cho phép các ứng viên tạo CV, tìm việc, đồng thời nhà tuyển dụng đăng tin tuyển dụng , admin quản ký các dịch vụ",
+            Tech = new [] { "Java", "Security", "JSP", "HTML"  ,"CSS" ,"Websocket" },
+           Image = "/image/tuyendung.png",
+            GithubUrl = "https://github.com/khongphaiduc/SWP391-GR5",
+            DemoUrl = "#"
+        },
+        new {
+    Title = "Food Ordering DDD",
+    Role = "Full-stack Developer",
+    Time = "---",
+    Status = "Đang Phát Chiển",
+    Desc = "Hệ thống đặt đồ ăn được triển khai theo kiến trúc Microservices và Domain Driven Design (DDD).",
+    Tech = new [] {
+        "ASP.NET Core",
+        "Web API (RESTful API)",
+        "gRPC",
+        "Entity Framework Core",
+        "SQL Server",
+        "PostgreSQL",
+        "Elasticsearch",
+        "MinIO",
+        "Ocelot API Gateway",
+        "Redis",
+        "RabbitMQ",
+        "OpenTelemetry",
+        "SignalR",
+        "JWT Authentication",
+        "ReactJS",
+        "HTML",
+        "CSS",
+        "JavaScript"
+    },
+    Image = "/image/market.png",
+    GithubUrl = "https://github.com/khongphaiduc/food-ordering-microservices-ddd.git",
+    DemoUrl = "#"
+}
+    };
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@fullName - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/info.css">
+</head>
+<body>
+    <div id="star-container"></div>
+    <div id="meteor-container"></div>
+    <div class="bg-grid"></div>
+
+    <nav id="navbar">
+        <div class="logo">PHAM TRUNG DUC</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="badge-intro"><i class="fas fa-bolt" style="color: var(--accent);"></i> ✨ Nơi biến khát khao của bạn thành hiện thực</div>
+                <h1>Hi, I'm <br><span class="highlight">@fullName</span></h1>
+                <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 500; height: 30px; margin-bottom: 20px;">I am a <span id="typed-text" style="color: var(--accent);"></span></h2>
+
+
+                <p class="hero-desc">
+                    Mình phát triển các hệ thống từ Backend API, ứng dụng web với ASP.NET Core, ứng dụng desktop với WPF/WinForms, đến dịch vụ Cloud và Microservices trong hệ sinh thái .NET
+                </p>
+                <p class="hero-desc">
+                    Blog này là nơi mình chia sẻ kiến thức, dự án cá nhân và hành trình trở thành
+                    một .NET Developer theo hướng hiện đại và ứng dụng AI.
+                </p>
+
+                <div class="hero-social">
+                    <a href="@githubUrl" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="@linkedinUrl" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="@facebookUrl" target="_blank" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="@instagramUrl" target="_blank" class="social-link ins"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:@email" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <div class="btn-group" style="display:flex; gap:15px;">
+                    <a href="#projects" class="btn btn-primary">Xem Dự Án <i class="fas fa-arrow-down"></i></a>
+                    <a href="@cvUrl" class="btn btn-outline" download>
+                        Download CV <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="avatar-box" data-aos="fade-left" data-aos-duration="1200">
+                <div class="avatar-bg-glow"></div>
+                <img src="@avatarUrl" alt="@fullName" class="avatar-img">
+                <div class="tech-float tf-1"><i class="fas fa-code" style="color: #3b82f6;"></i> .NET Core 8.0</div>
+                <div class="tech-float tf-2"><i class="fas fa-database" style="color: #10b981;"></i> SQL Expert</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Technical <span>Expertise</span></h2>
+            <p class="section-subtitle">Bộ công cụ công nghệ tôi sử dụng để xây dựng các giải pháp mở rộng và bảo mật.</p>
+        </div>
+        <div class="skills-wrapper">
+            @foreach (var group in skills)
+            {
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas @group.Icon bg-icon-decor"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon-box"><i class="fas @group.Icon"></i></div>
+                        <h3 class="skill-title">@group.Category</h3>
+                    </div>
+                    <div class="skill-tags">
+                        @foreach (var item in group.Items)
+                        {
+                            <div class="tech-tag"><i class="fas fa-code-branch"></i> @item</div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <p class="section-subtitle">Các dự án tiêu biểu tôi đã thực hiện, tập trung vào hiệu năng và trải nghiệm người dùng.</p>
+        </div>
+        <div class="project-grid">
+            @foreach (var proj in projects)
+            {
+                var statusClass = "status-dev";
+                if (proj.Status == "Hoàn thành") { statusClass = "status-done"; }
+                else if (proj.Status == "R&D") { statusClass = "status-rnd"; }
+
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="p-img-wrapper">
+                        <div class="p-img-overlay"></div>
+                        <div class="p-status @statusClass">@proj.Status</div>
+                        <img src="@proj.Image" alt="@proj.Title" class="p-img" loading="lazy">
+                    </div>
+                    <div class="p-body">
+                        <div class="p-meta">
+                            <span class="p-role">@proj.Role</span>
+                            <span style="font-size: 0.8rem; color: #64748b;"><i class="far fa-clock"></i> @proj.Time</span>
+                        </div>
+                        <h3 class="p-title">@proj.Title</h3>
+                        <p class="p-desc">@proj.Desc</p>
+                        <div class="p-tech-list">
+                            @foreach (var t in proj.Tech)
+                            {
+                                <span class="p-tech-item">@t</span>
+                            }
+                        </div>
+                        <div class="p-footer">
+                            <a href="@proj.GithubUrl" target="_blank" class="btn-sm btn-code"><i class="fab fa-github"></i> Code</a>
+                            <a href="@proj.DemoUrl" target="_blank" class="btn-sm btn-live"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="cta-box" data-aos="zoom-in">
+            <h2 style="font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; color: white;">Sẵn sàng hợp tác?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Tôi luôn tìm kiếm cơ hội để giải quyết các bài toán khó. Hãy kết nối ngay hôm nay.</p>
+            <a href="mailto:@email" class="btn btn-primary" style="padding: 16px 45px; font-size: 1.1rem;"><i class="fas fa-paper-plane"></i> Gửi Email</a>
+
+            <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="@facebookUrl" target="_blank" class="hover-text-white" style="color: var(--text-muted); font-size: 1.5rem; transition: 0.3s;"><i class="fab fa-facebook"></i></a>
+                <a href="@instagramUrl" target="_blank" class="hover-text-white" style="color: var(--text-muted); font-size: 1.5rem; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed & Built by <strong style="color: var(--text-main);">@fullName</strong> © @DateTime.Now.Year</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="~/js/info.js"></script>
+
+    <script>
+        AOS.init({ once: true, offset: 60, duration: 800 });
+        new Typed('#typed-text', {
+            strings: @Html.Raw(roles),
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+    </script>
+</body>
+</html>
