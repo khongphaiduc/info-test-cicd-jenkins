@@ -17,8 +17,8 @@ pipeline {
                  // Chui qua 2 lớp thư mục để đến đúng nơi chứa Dockerfile và mã nguồn
                  dir('introduction-personal-phamtrungduc/introduction-personal-phamtrungduc') {
                      
-                     bat 'docker build -t ptrungduc1011/info:v1 .' 
-                     bat 'docker push ptrungduc1011/info:v1'
+                     sh 'docker build -t ptrungduc1011/info:v1 .' 
+                     sh 'docker push ptrungduc1011/info:v1'
                      
                  }
              }
