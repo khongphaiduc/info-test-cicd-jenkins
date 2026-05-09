@@ -5,7 +5,7 @@ pipeline {
        stage('Clone Project') {
           steps {
             git branch: 'main', 
-            credentialsId: 'github-token', 
+            credentialsId: 'tokenGithub', 
             url: 'https://github.com/khongphaiduc/info-test-cicd-jenkins.git' 
           }
        }
