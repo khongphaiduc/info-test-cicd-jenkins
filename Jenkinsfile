@@ -24,5 +24,25 @@ pipeline {
              }
           }
        }
+
+
+        stage('Deploy') {
+          steps {
+             sh '''
+                # 1. Dừng và xóa container cũ mang tên 'my-profile'
+                docker stop my-profile || true
+                docker rm my-profile || true
+                
+                # 2. Xóa image cũ để giải phóng dung lượng (tùy chọn)
+                docker rmi ptrungduc1011/info:v1 || true
+
+                # 3. Chạy container mới với cùng cấu hình cổng như cũ
+                # Ánh xạ 8090 (VPS) -> 8080 (Container) theo đúng ảnh bạn gửi
+                docker run -d --name my-profile -p 8090:8080 ptrungduc1011/info:v1
+             '''
+          }
+       }
+
+        
     }
 }
