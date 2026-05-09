@@ -12,7 +12,7 @@ pipeline {
 
      stage('Build and Push Image') {
           steps {
-             withDockerRegistry(credentialsId: 'ptrungduc1011s', url: 'https://index.docker.io/v1/') {
+            withDockerRegistry(credentialsId: 'ptrungduc1011docker', url: 'https://index.docker.io/v1/')  {
                  
                  // Chui qua 2 lớp thư mục để đến đúng nơi chứa Dockerfile và mã nguồn
                  dir('introduction-personal-phamtrungduc/introduction-personal-phamtrungduc') {
