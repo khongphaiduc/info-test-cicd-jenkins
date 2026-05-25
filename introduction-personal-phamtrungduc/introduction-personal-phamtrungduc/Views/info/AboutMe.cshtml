@@ -14,15 +14,15 @@
     var email = "ptrungduc1011@gmail.com";
     var cvUrl = "/documents/CV.pdf";
 
-    // --- DỮ LIỆU KỸ NĂNG ---
+    // --- SKILLS DATA ---
     var skills = new List<dynamic>
     {
         new { Category = "Languages & Frameworks", Icon = "fa-layer-group", Items = new [] { "C# / .NET Core 8.0", "ASP.NET Web API", "RESTful API", "Microservices", "Domain-Driven Design", "JavaScript", "HTML/CSS" } },
         new { Category = "Database & Caching", Icon = "fa-database", Items = new [] { "SQL Server", "PostgreSQL", "Entity Framework Core", "Redis", "Elasticsearch", "LINQ" } },
-        new { Category = "Tools & DevOps", Icon = "fa-server", Items = new [] { "Docker", "CICD","Jenkins",  "RabbitMQ (MassTransit)", "SignalR", "Git / GitHub", "Ocelot API Gateway", "Postman" } }
+        new { Category = "Tools & DevOps", Icon = "fa-server", Items = new [] { "Docker/Docker-Compose", "CICD","Jenkins",  "RabbitMQ (MassTransit)", "SignalR", "Git / GitHub", "Ocelot API Gateway", "Postman" } }
     };
 
-    // --- DỮ LIỆU DỰ ÁN ---
+    // --- PROJECTS DATA ---
     var projects = new List<dynamic>
     {
         new {
@@ -30,7 +30,7 @@
             Role = "Backend Developer / Architect",
             Time = "12/2025 - Present",
             Status = "In Development",
-            Desc = "Hệ thống thương mại điện tử đặt đồ ăn áp dụng kiến trúc Microservices và Domain-Driven Design (DDD). Tích hợp gợi ý thông minh và xử lý luồng dữ liệu bất đồng bộ.",
+            Desc = "E-commerce food ordering system applying Microservices and Domain-Driven Design (DDD) architecture. Integrates intelligent recommendations and asynchronous data stream processing.",
             Tech = new [] { "ASP.NET Core", "gRPC", "PostgreSQL", "Elasticsearch", "RabbitMQ", "Redis", "Ocelot", "JWT", "SignalR", "ReactJS" },
             Image = "/image/market.png",
             GithubUrl = "https://github.com/khongphaiduc/food-ordering-microservices-ddd.git",
@@ -41,7 +41,7 @@
             Role = "Backend Developer",
             Time = "05/2025 - 07/2025",
             Status = "Completed",
-            Desc = "Nền tảng tuyển dụng CNTT toàn diện kết nối ứng viên và doanh nghiệp. Hỗ trợ tạo CV, đăng tin tuyển dụng và quản trị dịch vụ hệ thống.",
+            Desc = "Comprehensive IT recruitment platform connecting candidates and businesses. Supports CV creation, job posting, and system service administration.",
             Tech = new [] { "Java", "JSP", "Spring Security", "WebSocket", "HTML/CSS", "SQL" },
             Image = "/image/tuyendung.png",
             GithubUrl = "https://github.com/khongphaiduc/SWP391-GR5",
@@ -52,7 +52,7 @@
             Role = "Full-stack Developer",
             Time = "08/2025 - 12/2025",
             Status = "Completed",
-            Desc = "Hệ thống quản lý khách sạn tích hợp Booking engine, xử lý luồng Check-in/out, theo dõi trạng thái phòng realtime và quản lý hóa đơn.",
+            Desc = "Hotel management system integrating Booking engine, handling Check-in/out flows, real-time room status tracking, and invoice management.",
             Tech = new [] { "ASP.NET Core", "EF Core", "SQL Server", "SignalR", "Redis", "OAuth2", "Razor Pages" },
             Image = "/image/hotel.png",
             GithubUrl = "https://github.com/khongphaiduc/hotel-manager-booking",
@@ -62,11 +62,11 @@
 }
 
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@fullName - Lập trình viên .NET Backend</title>
+    <title>@fullName - .NET Backend Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -90,15 +90,15 @@
     <section class="hero" id="about">
         <div class="hero-container">
             <div data-aos="fade-right" data-aos-duration="1000">
-                <div class="badge-intro"><i class="fas fa-terminal" style="color: var(--accent);"></i> Xây dựng hệ thống mở rộng & tối ưu hiệu năng</div>
+                <div class="badge-intro"><i class="fas fa-terminal" style="color: var(--accent);"></i> Building Scalable & Performance-Optimized Systems</div>
                 <h1>Hi, I'm <br><span class="highlight">@fullName</span></h1>
                 <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 500; height: 30px; margin-bottom: 20px;">I am a <span id="typed-text" style="color: var(--accent);"></span></h2>
 
                 <p class="hero-desc">
-                    Là một Software Engineer đam mê hệ sinh thái .NET, tôi tập trung thiết kế và xây dựng các hệ thống Backend có tính mở rộng cao, ứng dụng kiến trúc Microservices, Domain-Driven Design (DDD) và Cloud-native.
+                    As a Software Engineer passionate about the .NET ecosystem, I focus on designing and building highly scalable Backend systems, applying Microservices, Domain-Driven Design (DDD), and Cloud-native architectures.
                 </p>
                 <p class="hero-desc">
-                    Tôi luôn tìm kiếm việc tối ưu hóa cơ sở dữ liệu, áp dụng message brokers (RabbitMQ) và caching (Redis) để mang lại hiệu năng tốt nhất cho ứng dụng.
+                    I constantly seek to optimize databases, implement message brokers (RabbitMQ), and caching (Redis) to deliver the best performance for applications.
                 </p>
 
                 <div class="hero-social">
@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="btn-group" style="display:flex; gap:15px;">
-                    <a href="#projects" class="btn btn-primary">Xem Dự Án <i class="fas fa-arrow-down"></i></a>
+                    <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-down"></i></a>
                     <a href="@cvUrl" class="btn btn-outline" download>
                         Download CV <i class="fas fa-file-pdf"></i>
                     </a>
@@ -128,7 +128,7 @@
     <section id="skills">
         <div class="section-header" data-aos="fade-up">
             <h2 class="section-title">Technical <span>Expertise</span></h2>
-            <p class="section-subtitle">Bộ công cụ và công nghệ tôi sử dụng để giải quyết các bài toán kỹ thuật phức tạp.</p>
+            <p class="section-subtitle"><p class="section-subtitle">My toolkit and technologies used to solve complex technical problems.</p></p>
         </div>
         <div class="skills-wrapper">
             @foreach (var group in skills)
@@ -153,7 +153,7 @@
     <section id="projects">
         <div class="section-header" data-aos="fade-up">
             <h2 class="section-title">Featured <span>Projects</span></h2>
-            <p class="section-subtitle">Các dự án tiêu biểu phản ánh tư duy thiết kế hệ thống và kỹ năng giải quyết vấn đề.</p>
+            <p class="section-subtitle"><p class="section-subtitle">Key projects reflecting my system design thinking and problem-solving skills.</p></p>
         </div>
         <div class="project-grid">
             @foreach (var proj in projects)
@@ -195,7 +195,7 @@
         <div class="cta-box" data-aos="zoom-in">
             <h2 style="font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; color: white;">Open to Opportunities</h2>
             <p style="color: #cbd5e1; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Tôi luôn mở lòng với các cơ hội nghề nghiệp mới và sẵn sàng tham gia vào các dự án đầy thử thách. Hãy kết nối để cùng nhau tạo ra những sản phẩm chất lượng.
+                I am always open to new career opportunities and ready to participate in challenging projects. Let's connect to create quality products together.
             </p>
             <a href="mailto:@email" class="btn btn-primary" style="padding: 16px 45px; font-size: 1.1rem;"><i class="fas fa-paper-plane"></i> Get in touch</a>
 
